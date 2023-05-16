@@ -1,3 +1,5 @@
+#O arquivo url permite que uma nova url seja criada para a página principal, ambos os forms, edição dos forms e exclusão dos forms.
+
 """django_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
