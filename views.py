@@ -1,3 +1,7 @@
+#Na página views é o local dentro do app que possui todas as funções necessárias para renderizar os templates, ou seja, as funções dentro do views puxam os objetos das 
+#classes do banco de dados para um html tendo um contexto, que é o dicionário em que as chaves foram atribuídas ao conjunto de objetos.
+
+
 from django.shortcuts import render 
 from .models import Pessoa
 from .models import AssistirCorrida
