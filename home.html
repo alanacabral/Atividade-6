@@ -1,0 +1,112 @@
+{% load static %}
+
+<html>
+  <head> 
+    <title> Alana da Silva Cabral </title>
+    <link rel="stylesheet" href ="style.css">
+  </head>
+  <body>
+    <h1>Charles Leclerc </h1>
+    <h2>Curta biografia sobre o piloto de formula 1 Charles Leclerc</h2>
+        <img
+width="600px"src="https://cdn.shopify.com/s/files/1/0565/3230/4032/t/11/assets/charlesleclerc-1655344169661.webp?v=1655344171">
+    
+    <p class="texto1">* Antes da F1: </p>
+    
+    <p >Charles Marc Hervé Perceval Leclerc nasceu em 16/10/1997 (libriano) na cidade de Monte-Carlo em Mônaco. É filho do meio de um ex-piloto e uma cabeleireira. Desde pequeno, seu maior sonho era correr pela Ferrari. Charles iniciou sua carreira em 2005 no kart, onde obteve diversas conquistas. Em 2015, estreou na Fórmula 3 finalizando a competição em 4° lugar. Em 2016, logo foi anunciado como membro oficial da <i>Ferrari Driver Academy</i>. E em 2017 competiu pela primeira vez na Fórmula 2. Durante sua passagem pela categoria base da Fórmula 1, Charles obteve uma temporada de grande sucesso, terminando assim, campeão da competição pela equipe Prema com 282 pontos; 72 pontos a mais que o 2° colocado da competição.</p>
+    <img
+width="300px"src="https://res.cloudinary.com/prod-f2f3/image/upload/v1586249520/f2/global/articles/2018/08_Aug/2018-09-11.jpg">
+
+    
+    <p class="texto2">* Trajetóri na F1: </p>
+    
+    <p >Ao ganhar a Fórmula 2, em 2018 Charles conquistou seu lugar na Fórmula 1, estreando na Austrália pela equipe Sauber. Logo se destacou na competição, apesar de estar numa equipe mediana. Em 2019, o piloto conquistou seu lugar na maior equipe de Fórmula 1 da história, a Ferrari, ocupando o lugar de Kimi Räikkönen. Atualmente, Leclerc continua correndo pela Ferrari e ainda é um piloto de destaque, apesar da crise que a equipe vive. Charles conquistou em 2022 o 2° lugar na competição de pilotos com 308 pontos. Seu contrato a Ferrari acaba no final de 2024. </p>
+  
+    <b>Lista Técnica do piloto na F1</b>
+    <ul> 
+     <li>105 disputas</li> 
+     <li>5 vitórias</li>
+     <li>24 pódios</li>
+     <li>874 pontos</li>
+     <li>18 pole positions</li>
+     <li>7 voltas mais rápidas</li>
+    </ul>
+
+    <b>Lista de pontos por temporada na F1</b>
+    <ol>
+      <li>39</li>
+      <li>264</li>
+      <li>98</li>
+      <li>159</li>
+      <li>308</li>
+    </ol>
+    
+     <img
+width="400px"src="https://i2-prod.mirror.co.uk/incoming/article26527418.ece/ALTERNATES/n615/2_Bahrain-Grand-Prix-Race-Bahrain-International-Circuit.jpg">
+
+    <p class="texto3">* Curiosidades: </p>
+    
+    <p>1- Para que seus fãs pudessem acompanhar melhor sua carreira e até mesmo um pouco de sua vida pessoal Leclerc fez seu próprio canal no YouTube.</p>
+
+    <a href="https://www.youtube.com/watch?v=xyOko2wsw60" target="_blank" >Link para o 1° vídeo do canal</a><br>
+
+    <p>2- Tabela com mais informações sobre as 5 vitórias do piloto na F1 : </p>
+    <table border="2">
+      <tr>
+      <th>Ano</th>
+      <th>País</th>
+      <th>Circuito</th>
+      </tr>
+      <tr>
+      <th>2019</th>
+      <th>Bélgica</th>
+      <th>Spa-Francorchamps</th>
+      </tr>
+      <tr>
+      <th>2019</th>
+      <th>Itália</th>
+      <th>Monza</th>
+      </tr>
+      <tr>
+      <th>2022</th>
+      <th>Bahrein</th>
+      <th>Bahrain International Circuit</th>
+      <tr>
+      <th>2022</th>
+      <th>Austrália</th>
+      <th>Albert Park</th>
+      </tr>
+      <tr>
+      <th>2022</th>
+      <th>Austria</th>
+      <th>Spielberg</th>
+      </tr>
+      </tr>
+    </table>
+
+    <a href= "https://www.instagram.com/charles_leclerc/" >Obrigada! Para mais informções clique aqui </a><br>
+  
+  <ol>
+      {% for usuario in Pessoa %}
+      <li>{{usuario.name}}</li>
+      <li>{{usuario.lastname}}</li>
+      <li>{{usuario.nascimento}}</li>
+      <li>{{usuario.email}}</li>
+      <a href="/Pessoa/edit/{{usuario.id}}">Editar</a>
+      <a href="/Pessoa/delete/{{usuario.id}}">Remover</a>
+      {% endfor %}
+    </ol>
+    
+    <ul>
+      {% for cadacorrida in Corrida %}
+      <li>{{cadacorrida.local}}</li>
+      <li>{{cadacorrida.due_date}}</li>
+      <li>{{cadacorrida.done}}</li>
+      <li>{{cadacorrida.duracao}}</li>
+      <a href="/Corrida/edit/{{cadacorrida.id}}">Editar</a>
+      <a href="/Corrida/delete/{{cadacorrida.id}}">Remover</a>
+      {% endfor %}
+    </ul>
+    
+  </body>
+</html>

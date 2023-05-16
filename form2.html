@@ -1,0 +1,20 @@
+ <form method='post'>
+    {% csrf_token %}
+    <div>
+      <label>Local da corrida</label>
+      <input type='text' name='local' value="{{cadacorrida.local}}"/>
+    </div>
+    <div>
+      <label>Data da corrida</label>
+      <input type='date' name='due_date' value="{{cadacorrida.due-date}}"/>
+    </div>  
+    <div>
+     <label>Tempo de duração</label>
+     <input type='text' name='duracao' value="{{cadacorrida.duracao}}"/>
+    </div>
+    <div>
+      <label>Assistiu inteira</label>
+      <input type='checkbox' name='done'{% if cadacorrida.done==True%} checked {%endif %} />
+    </div>
+    <input type='submit'/>
+  </form>

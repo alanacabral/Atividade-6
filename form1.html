@@ -1,0 +1,20 @@
+ <form method='post'>
+    {% csrf_token %}
+    <div>
+      <label>Primeiro Nome</label>
+      <input type='text' name='nome' value="{{usuario.name}}" />
+    </div
+    <div>
+      <label>Sobrenome</label>
+      <input type='text' name='sobrenome' value="{{usuario.lastname}}" />
+    </div>
+    <div>
+      <label>Data de nascimento</label>
+      <input type='date' name='nascimento' value="{{usuario.nascimento}}" />
+    </div>  
+    <div>
+     <label>Email</label>
+     <input name ='email' value="{{usuario.email}}" />
+    </div>
+    <input type='submit'/>
+  </form>
